@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,400;0,600;1,100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+    
+  <body>
+    <center><h1>mixMotion</h1></center>
+    <video autoplay muted loop>
+      <source src="images/bg2.mp4" type="video/mp4">
+      </video> 
+      
+        
+          <div class="volC">
+            <div class="label"><h2>VOL.</h2></div>
+            <input type="range" id="volume" class="slider" min="0" max="100" value="70" step="1" />
+          </div>
+          <div class="speedC">
+            <div class="label"><h2>SPEED.</h2></div>
+            <input type="range" id="speed-control" class="slider" min="0.5" max="5" step="0.1" value="1">
+          </div>
+          <div class="bassC">
+            <div class="label"><h2>BASS.</h2></div>
+            <input type="range" id="bass" class="slider" min="0.5" max="2" step="0.1" value="1">
+          </div>
+          <div class="pitchC">
+            <div class="label"><h2>PITCH.</h2></div>
+            <input type="range" id="pitch" class="slider" min="0.5" max="2" step="0.1" value="1">
+          </div>
+
+          <img class="disc" src="images/disc2.png">
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
