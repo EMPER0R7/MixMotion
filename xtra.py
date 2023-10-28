@@ -1,3 +1,4 @@
+
 import cv2
 import numpy as np
 import mediapipe as mp
@@ -150,4 +151,5 @@ while cap.isOpened():
         break
     
 cap.release()
+
 cv2.destroyAllWindows()
