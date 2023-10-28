@@ -1,0 +1,153 @@
+:root {
+  font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 5px rgb(0, 255, 102);
+  }
+  50% {
+      text-shadow: 0 0 20px rgb(255, 0, 0), 0 0 30px rgb(255, 0, 0);
+  }
+  100% {
+      text-shadow: 0 0 5px rgb(255, 255, 0);
+}
+}
+.disc{
+  position: absolute;
+  top: 65%;
+  left: 68%;
+  height: 200px;
+  border-radius: 100px;
+  animation: spin 7s linear infinite;
+}
+body {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 1128px;
+  height: 627px;
+  object-fit: cover;
+  align-items: center;
+  place-items: center;
+}
+.desk{
+  position: relative;
+  top: 46%;
+  left: 100%;
+  box-sizing: content-box;
+  height: 200px; 
+  width: 100px; 
+  
+}
+.slider{
+  width: 250px;
+  height: 12px;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  background: #a1aee5;
+  outline: none;
+  
+}
+.label{
+  bottom: 0%;
+  /* transform: rotate(270deg); */
+  color: aliceblue;
+  border: 2px;
+  font-weight: bolder;
+  border-color:rgb(229, 46, 165) ;
+  text-shadow:
+  0 0 10px #00f,
+  0 0 20px #00f,
+  0 0 30px #00f,
+  0 0 40px rgb(255, 255, 255),
+  0 0 50px rgb(255, 255, 255),
+  0 0 60px rgb(242, 242, 242);
+  
+}
+.slider::-moz-range-thumb {
+  color: beigex;
+}
+
+.speedC{
+  transform: rotate(270deg);
+  display: flex;
+  position: absolute;
+  top: 32%;
+  align-items: center;
+  left: 5%;
+}
+.volC{
+  position: absolute;
+  top: 30%;
+  display: flex;
+  left: 0%;
+  transform: rotate(270deg);
+  align-items: center;
+
+}
+.bassC{
+  position: absolute;
+  top: 31%;
+  display: flex;
+  left: 12%;
+  transform: rotate(270deg);
+  align-items: center;
+
+}
+.pitchC{
+  position: absolute;
+  top: 32.5%;
+  display: flex;
+  left: 19%;
+  transform: rotate(270deg);
+  align-items: center;
+
+}
+.controls{
+  position: absolute;
+  top: 28%;
+  left: 0%;
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1128px;
+  height: 627px;
+  object-fit: cover;
+  z-index: -2;
+}
+.bg{
+  height:500px;
+  width: 100%
+}
+
+h1{
+  width: 100px;
+  font-weight: bolder;
+  font-size: 30px;
+  color: blanchedalmond;
+  animation: glow 5s ease-in-out infinite;
+
+  
+}
+
+
+
