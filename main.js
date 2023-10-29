@@ -100,13 +100,17 @@ seekBar.addEventListener('input', function () {
     if (event.key==='w')
     {
       volumeControl.value++;
-      audio.volume = volumeControl.value / 100;
+      volumeControl.value++;
+      volumeControl.value++;
+      volumeControl.value++;
+      volumeControl.value++;
+      audio.volume = volumeControl.value/100 ;
     }
   })
   document.addEventListener('keydown', function(event){
     if (event.key==='s')
     {
-      volumeControl.value-=1;
+      volumeControl.value-=5;
       audio.volume = volumeControl.value / 100;
     }
   })
