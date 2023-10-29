@@ -1,14 +1,20 @@
-const audio = new Audio('music/s.mp3');
-const audio2=new Audio('music/s.mp3');
-const audio3=new Audio('music/s.mp3');
-const audio4=new Audio('music/s.mp3');
-const audio5=new Audio('music/b.mp3');
+const fileInput = document.getElementById('file-input');
+const selectAudioButton = document.getElementById('select-audio-button');
+let filePath='music/M83.mp3';
+
+
+
+const audio = new Audio(filePath);
+const audio2=new Audio(filePath);
+const audio3=new Audio(filePath);
+const audio4=new Audio(filePath);
+const audio5=new Audio('music/b.mp3')
 const disc = document.querySelector('.disc');
 
 function rotateDisc() {
   const currentTime = audio.currentTime;
   const rotationAngle = (currentTime * 360) / 5;
-  disc.style.transform = `rotate(${rotationAngle}deg`;
+  disc.style.transform = rotate(${rotationAngle}deg;
 }
 
 let spacebarPressed = false;
@@ -27,6 +33,7 @@ document.addEventListener('keydown', function (event) {
     audio2.pause();
         audio3.pause();
         audio4.pause();
+        audio5.pause();
     disc.style.animationPlayState = 'paused';
     spacebarPressed = false;
     rotateDisc();
@@ -87,20 +94,86 @@ seekBar.addEventListener('input', function () {
         t++;
     }
   })
-  var t=0;
+
+
+  document.addEventListener('keydown', function(event){
+    if (event.key==='w')
+    {
+      volumeControl.value++;
+      audio.volume = volumeControl.value / 100;
+    }
+  })
+  document.addEventListener('keydown', function(event){
+    if (event.key==='s')
+    {
+      volumeControl.value-=1;
+      audio.volume = volumeControl.value / 100;
+    }
+  })
+  document.addEventListener('keydown', function(event){
+    if (event.key==='e')
+    {
+      speedControl.value++;
+      const speed = parseFloat(speedControl.value);
+  audio.playbackRate = speed;
+    }
+  })
+  document.addEventListener('keydown', function(event){
+    if (event.key==='d')
+    {
+      speedControl.value-=1;
+      const speed = parseFloat(speedControl.value);
+  audio.playbackRate = speed;
+    }
+  })
+
+  document.addEventListener('keydown', function(event){
+    if (event.key==='z')
+    {
+      // lOOp
+      audio.currentTime -=1.5;
+    }
+  })
+  document.addEventListener('keydown', function(event){
+    if (event.key==='x')
+    {
+      //echo
+      if(t%2===0)
+    {
+        audio2.currentTime=audio.currentTime-0.1;
+        audio3.currentTime=audio.currentTime-0.2;
+        audio4.currentTime=audio.currentTime-0.3;
+        audio2.play();
+        audio3.play();
+        audio4.play();
+        audio2.volume=audio.volume-0.3;
+        audio3.volume=audio.volume-0.6;
+        audio4.volume=audio.volume-0.9;
+        t++;
+    }
+    else{
+        audio2.pause();
+        audio3.pause();
+        audio4.pause();
+        t++;
+    }
+  }})
+
+  
+
+  var g=0;
   const jiggle=document.getElementById('jiggle');
   document.addEventListener('keydown',function(event){
-    if (event.key === 'x') {
+    if (event.key === 'v') {
 
       if(t%2===0){
         audio5.play();
-        t++;
+        g++;
       }
       else{
         audio5.pause();
-        t++;
+        g++;
       }
     }
     
   })
-  
