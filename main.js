@@ -1,7 +1,8 @@
-const audio = new Audio('music/M83.mp3');
-const audio2=new Audio('music/M83.mp3');
-const audio3=new Audio('music/M83.mp3');
-const audio4=new Audio('music/M83.mp3');
+const audio = new Audio('music/s.mp3');
+const audio2=new Audio('music/s.mp3');
+const audio3=new Audio('music/s.mp3');
+const audio4=new Audio('music/s.mp3');
+const audio5=new Audio('music/b.mp3');
 const disc = document.querySelector('.disc');
 
 function rotateDisc() {
@@ -86,3 +87,20 @@ seekBar.addEventListener('input', function () {
         t++;
     }
   })
+  var t=0;
+  const jiggle=document.getElementById('jiggle');
+  document.addEventListener('keydown',function(event){
+    if (event.key === 'x') {
+
+      if(t%2===0){
+        audio5.play();
+        t++;
+      }
+      else{
+        audio5.pause();
+        t++;
+      }
+    }
+    
+  })
+  
