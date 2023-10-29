@@ -21,4 +21,14 @@ To install MixMotion, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/mixmotion.git
+   git clone https://github.com/EMPER0R7/mixmotion.git
+
+## Usage
+
+MixMotion is a user-friendly virtual DJ application that allows you to control music and mix tracks with your hand gestures. Here's how you can use this project:
+- Run try6.py file
+- Open folder with VS code.
+- Start live server to run the website.
+
+
+
