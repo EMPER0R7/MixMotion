@@ -14,7 +14,7 @@ const disc = document.querySelector('.disc');
 function rotateDisc() {
   const currentTime = audio.currentTime;
   const rotationAngle = (currentTime * 360) / 5;
-  disc.style.transform = rotate(${rotationAngle}deg;
+  disc.style.transform = rotate(`${rotationAngle}deg`);
 }
 
 let spacebarPressed = false;
